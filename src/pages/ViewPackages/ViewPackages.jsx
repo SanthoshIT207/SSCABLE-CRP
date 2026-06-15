@@ -2069,9 +2069,9 @@ const ViewPackages = () => {
       <div className="view-wrapper">
 
         {/* SIDEBAR */}
-        <div className="sidebar">
+        <div className="view-sidebar">
 
-          <div className="logo-section">
+          <div className="view-logo-section">
 
             <img
               src="/logo.png"
@@ -2081,10 +2081,10 @@ const ViewPackages = () => {
 
           </div>
 
-          <div className="sidebar-menu">
+          <div className="view-sidebar-menu">
 
             <button
-              className="menu-btn"
+              className="view-menu-btn"
               onClick={() =>
                 navigate("/dashboard")
               }
@@ -2109,7 +2109,7 @@ const ViewPackages = () => {
            
            </button>
 
-            <button className="menu-btn active-menu">
+            <button className="view-menu-btn view-active-menu">
 
               <FaGift />
 
@@ -2150,7 +2150,7 @@ const ViewPackages = () => {
 </button>
 
             <button
-              className="menu-btn logout-btn"
+className="view-menu-btn view-logout-btn"
               onClick={handleLogout}
             >
 
@@ -2166,7 +2166,7 @@ const ViewPackages = () => {
 
         <div className="view-content">
 
-          <div className="topbar">
+          <div className="view-topbar">
 
             <marquee
               behavior="scroll"
@@ -2179,7 +2179,7 @@ const ViewPackages = () => {
 
             </marquee>
 
-            <FaBell className="bell-icon" />
+            <FaBell className="view-bell-icon" />
 
           </div>
 
@@ -2294,7 +2294,7 @@ const ViewPackages = () => {
 
           </div>
 
-          <div className="dashboard-footer">
+          <div className="view-dashboard-footer">
 
             <marquee
               behavior="scroll"

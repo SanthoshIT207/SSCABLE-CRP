@@ -96,9 +96,9 @@ const Dashboard=()=>{
 
       <div className="dashboard-wrapper">
 
-        <div className="sidebar">
+        <div className="dashboard-sidebar">
 
-          <div className="logo-section">
+          <div className="dashboard-logo-section">
 
             <img
               src="/logo.png"
@@ -108,9 +108,9 @@ const Dashboard=()=>{
 
           </div>
 
-          <div className="sidebar-menu">
+          <div className="dashboard-sidebar-menu">
 
-            <button className="menu-btn active-menu">
+            <button className="dashboard-menu-btn active-menu">
 
               <FaHome />
 
@@ -119,7 +119,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn"
+              className="dashboard-menu-btn"
               onClick={()=>
                 navigate("/recharge")
               }
@@ -132,7 +132,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn"
+              className="dashboard-menu-btn"
               onClick={()=>
                 navigate(
                   "/view-packages"
@@ -147,7 +147,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn"
+              className="dashboard-menu-btn"
               onClick={()=>
                 navigate(
                   "/payment-history"
@@ -162,7 +162,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn"
+              className="dashboard-menu-btn"
               onClick={()=>
                 navigate(
                   "/tic-internet"
@@ -177,7 +177,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn"
+              className="dashboard-menu-btn"
               onClick={()=>
                 navigate(
                   "/contact-support"
@@ -192,7 +192,7 @@ const Dashboard=()=>{
             </button>
 
             <button
-              className="menu-btn logout-btn"
+              className="dashboard-menu-btn logout-btn"
               onClick={handleLogout}
             >
 
@@ -208,7 +208,7 @@ const Dashboard=()=>{
 
         <div className="dashboard-content">
 
-          <div className="topbar">
+          <div className="dashboard-topbar">
 
             <marquee
               behavior="scroll"
@@ -522,7 +522,7 @@ const Dashboard=()=>{
 
           </div>
 
-          <div className="dashboard-footer">
+          <div className="dashboard-main-footer">
 
             <marquee
               behavior="scroll"
