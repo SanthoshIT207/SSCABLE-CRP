@@ -337,6 +337,7 @@ body{
   overflow:hidden;
   white-space:nowrap;
   background:#ffffff;
+  margin-top:auto;
 }
 
 .dashboard-main-footer marquee{
@@ -546,13 +547,9 @@ select{
 }
 @media (min-width:769px) and (max-width:1024px){
 
- .dashboard-wrapper{
-  min-height:auto;
-}
-
-.dashboard-content{
-  min-height:auto;
-}
+  .dashboard-content{
+    min-height:100vh;
+  }
 
   .dashboard-grid{
     flex:none !important;
