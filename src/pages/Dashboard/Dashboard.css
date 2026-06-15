@@ -546,18 +546,22 @@ select{
 }
 @media (min-width:769px) and (max-width:1024px){
 
+  .dashboard-content{
+    min-height:100vh;
+  }
+
   .dashboard-grid{
-  flex:none !important;
-  align-items:start;
-  padding-bottom:10px;
-}
+    flex:none !important;
+    align-items:start;
+    padding-bottom:10px;
+  }
 
   .details-card{
-  height:fit-content;
-  min-height:unset;
-  align-self:start;
-  padding-bottom:12px;
-}
+    height:fit-content;
+    min-height:unset;
+    align-self:start;
+    padding-bottom:12px;
+  }
 
   .detail-row:last-child{
     margin-bottom:0;
