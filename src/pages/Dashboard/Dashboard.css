@@ -547,13 +547,15 @@ select{
 @media (min-width:769px) and (max-width:1024px){
 
   .dashboard-grid{
+    flex:none !important;
     align-items:start;
+    padding-bottom:10px;
   }
 
   .details-card{
     height:auto;
     min-height:auto;
-    padding-bottom:18px;
+    padding-bottom:12px;
   }
 
   .detail-row:last-child{
@@ -576,11 +578,11 @@ select{
   }
 
   .status-card{
-    padding-bottom:16px;
+    padding-bottom:14px;
   }
 
   .quick-actions{
-    padding-bottom:16px;
+    padding-bottom:14px;
   }
 
   .status-card p{
@@ -589,6 +591,11 @@ select{
 
   .action-grid{
     gap:12px;
+  }
+
+  .dashboard-main-footer{
+    margin-top:0;
+    padding-top:10px;
   }
 
 }
