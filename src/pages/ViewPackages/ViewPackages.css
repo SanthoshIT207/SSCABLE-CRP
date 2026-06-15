@@ -25,26 +25,25 @@ body{
   overflow-x:hidden;
 }
 
-/* =========================================
-   UPDATED UNIQUE SIDEBAR CLASSES
-========================================= */
-
 .view-sidebar{
-  width:220px;
-  min-width:220px;
+  width:240px;
+  min-width:240px;
+  max-width:240px;
   background:#ffffff;
-  border-right:1px solid #ececec;
-  padding:18px 14px;
+  border-right:1px solid #e9edf5;
+  padding:20px 14px;
   flex-shrink:0;
+  display:flex;
+  flex-direction:column;
 }
 
 .view-logo-section{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:25px;
 }
 
-.dashboard-logo{
-  width:100px;
+.view-dashboard-logo{
+  width:125px;
   object-fit:contain;
   display:block;
   margin:0 auto;
@@ -53,26 +52,27 @@ body{
 .view-sidebar-menu{
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:12px;
+  width:100%;
 }
 
 .view-menu-btn{
   width:100%;
-  height:48px;
-  min-height:48px;
+  height:52px;
+  min-height:52px;
   border:none;
   outline:none;
-  border-radius:12px;
+  border-radius:14px;
   background:transparent;
   color:#465784;
-  font-size:14px;
+  font-size:15px;
   font-weight:500;
   line-height:1;
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap:12px;
-  padding:0 16px;
+  gap:14px;
+  padding:0 18px;
   cursor:pointer;
   transition:
     background .3s,
@@ -89,7 +89,7 @@ body{
 }
 
 .view-menu-btn svg{
-  font-size:17px;
+  font-size:18px;
   flex-shrink:0;
 }
 
@@ -109,6 +109,10 @@ body{
   color:white !important;
   margin:0 !important;
   transform:none !important;
+  height:52px !important;
+  min-height:52px !important;
+  width:100% !important;
+  flex-shrink:0 !important;
 }
 
 .view-active-menu svg{
@@ -119,14 +123,13 @@ body{
   margin-top:0;
 }
 
-/* ========================================= */
-
 .view-content{
   flex:1;
   display:flex;
   flex-direction:column;
+  width:calc(100% - 240px);
   min-width:0;
-  width:100%;
+  overflow-x:auto;
 }
 
 /* =========================================
@@ -134,7 +137,7 @@ body{
 ========================================= */
 
 .view-topbar{
-  height:68px;
+  height:75px;
   border-bottom:1px solid #ececec;
   display:flex;
   align-items:center;
@@ -144,21 +147,19 @@ body{
 
 .view-topbar marquee{
   color:#0033aa;
-  font-size:18px;
+  font-size:23px;
   font-weight:700;
   font-family:cursive;
 }
 
 .view-bell-icon{
   color:#0033aa;
-  font-size:18px;
+  font-size:22px;
   cursor:pointer;
 }
 
-/* ========================================= */
-
 .view-title{
-  padding:22px 28px 10px;
+  padding:28px 35px 10px;
 }
 
 .view-title h1{
@@ -193,9 +194,12 @@ body{
   display:flex;
   flex-direction:column;
   gap:14px;
+  width:100%;
 }
 
 .package-card{
+  width:100%;
+  min-width:0;
   background:white;
   border:1px solid #ececec;
   border-radius:16px;
@@ -240,8 +244,8 @@ body{
   font-size:13px;
 }
 
-.active-pack,
-.addon-pack{
+.view-active-pack,
+.view-addon-pack{
   padding:4px 10px;
   border-radius:20px;
   font-size:10px;
@@ -249,12 +253,12 @@ body{
   display:inline-block;
 }
 
-.active-pack{
+.view-active-pack{
   background:#d7ffd7;
   color:green;
 }
 
-.addon-pack{
+.view-addon-pack{
   background:#edf4ff;
   color:#0033aa;
 }
@@ -328,10 +332,6 @@ body{
   font-weight:700;
 }
 
-/* =========================================
-   UPDATED FOOTER CLASS
-========================================= */
-
 .view-dashboard-footer{
   height:55px;
   border-top:1px solid #ececec;
@@ -348,7 +348,6 @@ body{
   font-weight:600;
 }
 
-/* ========================================= */
 
 .modal-overlay{
   position:fixed;
@@ -438,12 +437,15 @@ body{
     margin-bottom:18px;
   }
 
-  .dashboard-logo{
+  .view-dashboard-logo{
     width:85px;
   }
 
   .view-sidebar-menu{
+    display:flex;
+    flex-direction:column;
     gap:8px;
+    width:100%;
   }
 
   .view-menu-btn{
@@ -578,9 +580,6 @@ select{
   font-size:16px;
 }
 
-/* =========================================
-   DESKTOP MODE FIX
-========================================= */
 
 @media (min-width:769px){
 
@@ -591,16 +590,16 @@ select{
 
   .view-sidebar{
     position:relative;
-    width:220px;
-    min-width:220px;
+    width:240px;
+    min-width:240px;
+    max-width:240px;
     height:auto;
     flex-shrink:0;
   }
 
   .view-content{
-    width:calc(100% - 220px);
+    flex:1;
     min-width:0;
-    overflow-x:auto;
+    overflow:hidden;
   }
-
 }

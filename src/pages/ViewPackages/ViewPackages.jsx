@@ -2076,7 +2076,7 @@ const ViewPackages = () => {
             <img
               src="/logo.png"
               alt="logo"
-              className="dashboard-logo"
+              className="view-dashboard-logo"
             />
 
           </div>
@@ -2097,7 +2097,7 @@ const ViewPackages = () => {
             </button>
 
            <button
-             className="menu-btn"
+            className="view-menu-btn"
              onClick={() =>
                navigate("/recharge")
              }
@@ -2118,14 +2118,14 @@ const ViewPackages = () => {
             </button>
 
            <button
-  className="menu-btn"
+  className="view-menu-btn"
   onClick={() => navigate("/payment-history")}
 >
   <FaHistory /> Payment History
 </button>
 
            <button
-  className="menu-btn"
+  className="view-menu-btn"
   onClick={() =>
     navigate("/tic-internet")
   }
@@ -2137,7 +2137,7 @@ const ViewPackages = () => {
 
 </button>
             <button
-  className="menu-btn"
+  className="view-menu-btn"
   onClick={() =>
     navigate("/contact-support")
   }
