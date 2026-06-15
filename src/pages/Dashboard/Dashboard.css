@@ -544,3 +544,51 @@ select{
     font-size:17px;
   }
 }
+@media (min-width:769px) and (max-width:1024px){
+
+  .dashboard-grid{
+    align-items:start;
+  }
+
+  .details-card{
+    height:auto;
+    min-height:auto;
+    padding-bottom:18px;
+  }
+
+  .detail-row:last-child{
+    margin-bottom:0;
+  }
+
+  .right-side{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    height:auto;
+    align-self:start;
+  }
+
+  .status-card,
+  .quick-actions{
+    flex:none !important;
+    height:auto !important;
+    min-height:unset !important;
+  }
+
+  .status-card{
+    padding-bottom:16px;
+  }
+
+  .quick-actions{
+    padding-bottom:16px;
+  }
+
+  .status-card p{
+    margin-bottom:0;
+  }
+
+  .action-grid{
+    gap:12px;
+  }
+
+}
