@@ -13,14 +13,14 @@ body{
 
 .dashboard-main-container{
   width:100%;
-  min-height:100vh;
+  min-height:100svh;
   background:#003bb5;
   padding:0;
 }
 
 .dashboard-wrapper{
   width:100%;
-  min-height:100vh;
+  min-height:100svh;
   background:#ffffff;
   display:flex;
   flex-direction:row;
@@ -575,7 +575,7 @@ select{
 @media (min-width:769px) and (max-width:1024px){
 
   .dashboard-content{
-    min-height:100vh;
+    min-height:100svh;
   }
 
   .dashboard-grid{

@@ -425,6 +425,9 @@ body{
   .view-wrapper{
     flex-direction:column;
   }
+  .view-content{
+  min-height:100svh;
+}
 
   .view-sidebar{
     width:100%;

@@ -7,13 +7,13 @@
 
 .recharge-main-container{
   width:100%;
-  min-height:100dvh;
+  min-height:100svh;
   background:#f8fbff;
 }
 
 .recharge-wrapper{
   width:100%;
-  min-height:100dvh;
+  min-height:100svh;
   display:flex;
   background:#f8fbff;
 }
@@ -309,6 +309,10 @@
   .recharge-wrapper{
     flex-direction:column;
   }
+  .recharge-wrapper{
+    flex-direction:column;
+  }
+
 
   .sidebar{
     width:100%;

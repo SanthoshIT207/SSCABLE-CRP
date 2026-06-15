@@ -454,6 +454,9 @@ body{
   .tic-wrapper{
     flex-direction:column;
   }
+  .tic-content{
+  min-height:100svh;
+}
 
   .sidebar{
     width:100%;
