@@ -1,0 +1,903 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.googlepay-main-container{
+  width:100%;
+  min-height:100dvh;
+  padding-bottom:
+  env(safe-area-inset-bottom);
+  background:#f3f7ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px;
+  overflow-x:hidden;
+}
+
+.googlepay-card{
+  width:100%;
+  max-width:390px;
+  background:linear-gradient(
+    180deg,
+    #ffffff,
+    #eef4ff
+  );
+  border-radius:26px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.15);
+  padding:20px 20px 22px;
+}
+
+.googlepay-bank-page-card{
+  min-height:auto !important;
+}
+
+.googlepay-loading-screen{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:30px 0 20px;
+}
+
+.googlepay-logo-circle{
+  width:113px;
+  height:113px;
+  border-radius:50%;
+  background:#ffffff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:38px auto 18px;
+  box-shadow:
+  0 4px 15px rgba(0,0,0,.08);
+}
+
+.googlepay-logo{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.googlepay-title{
+  color:#111827;
+  font-size:28px;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.googlepay-subtitle{
+  color:#374151;
+  font-size:19px;
+  font-weight:500;
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.googlepay-loader-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:46px;
+}
+
+.googlepay-loader{
+  color:#5b21b6;
+  font-size:34px;
+  animation:googlepaySpin 1s linear infinite;
+}
+
+@keyframes googlepaySpin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.googlepay-bottom{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+
+.googlepay-bottom p{
+  color:#4b5563;
+  font-size:15px;
+  font-weight:600;
+}
+
+.googlepay-upi-logo{
+  width:92px;
+  object-fit:contain;
+}
+
+.googlepay-bank-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.googlepay-back-btn{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#eef2ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  flex-shrink:0;
+}
+
+.googlepay-back-btn svg{
+  color:#1a73e8;
+  font-size:16px;
+}
+
+.googlepay-bank-header-center{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.googlepay-bank-upi-logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+
+.googlepay-bank-header-center h2{
+  color:#111827;
+  font-size:20px;
+  font-weight:700;
+}
+
+.googlepay-bank-header-center p{
+  color:#6b7280;
+  font-size:13px;
+}
+
+.googlepay-amount-box{
+  width:100%;
+  background:#ffffff;
+  border:1px solid #dbeafe;
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:18px;
+}
+
+.googlepay-amount-box span{
+  color:#6b7280;
+  font-size:13px;
+  font-weight:400;
+}
+
+.googlepay-amount-box h1{
+  color:#111827;
+  font-size:28px;
+  font-weight:700;
+  margin-top:5px;
+}
+
+.googlepay-dropdown-container{
+  width:100%;
+  position:relative;
+  margin-bottom:18px;
+  z-index:50;
+}
+
+.googlepay-dropdown-selected{
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  position:relative;
+  z-index:60;
+  min-height:82px;
+  border:1px solid #e5e7eb;
+}
+
+.googlepay-choose-bank-text{
+  width:100%;
+  color:#7a7a7a;
+  font-size:14px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+}
+
+.googlepay-selected-bank-info{
+  width:100%;
+}
+
+.googlepay-selected-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.googlepay-selected-left h3{
+  color:#111827;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.googlepay-selected-left p{
+  color:#6b7280;
+  font-size:12px;
+}
+
+.googlepay-bank-logo{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  border-radius:10px;
+  flex-shrink:0;
+}
+
+.googlepay-dropdown-arrow{
+  color:#666;
+  font-size:15px;
+  transition:.3s;
+  flex-shrink:0;
+}
+
+.googlepay-rotate-arrow{
+  transform:rotate(180deg);
+}
+
+.googlepay-dropdown-list{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.18);
+  z-index:100;
+  max-height:250px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.googlepay-dropdown-list::-webkit-scrollbar{
+  width:5px;
+}
+
+.googlepay-dropdown-list::-webkit-scrollbar-thumb{
+  background:#cfcfcf;
+  border-radius:10px;
+}
+
+.googlepay-dropdown-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  cursor:pointer;
+  transition:.2s;
+  background:#ffffff;
+}
+
+.googlepay-dropdown-item:hover{
+  background:#f5f9ff;
+}
+
+.googlepay-dropdown-item h3{
+  color:#111827;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.googlepay-dropdown-item p{
+  color:#6b7280;
+  font-size:12px;
+}
+
+.googlepay-message-box{
+  margin-top:18px;
+  position:relative;
+  z-index:1;
+}
+
+.googlepay-message-box label{
+  color:#111827;
+  font-size:14px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.googlepay-message-box textarea{
+  width:100%;
+  height:90px;
+  border:1px solid #e5e7eb;
+  outline:none;
+  resize:none;
+  border-radius:14px;
+  padding:14px;
+  background:#ffffff;
+  font-size:14px;
+  color:#111827;
+}
+
+.googlepay-message-box textarea::placeholder{
+  color:#9ca3af;
+}
+
+.googlepay-continue-btn{
+  width:100%;
+  height:54px;
+  border:none;
+  border-radius:14px;
+  margin-top:18px;
+  background:#5b21b6;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.googlepay-continue-btn:hover{
+  transform:translateY(-1px);
+}
+
+.googlepay-pin-page{
+  width:100%;
+}
+
+.googlepay-pin-title{
+  color:#111827;
+  text-align:center;
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:22px;
+}
+
+.googlepay-pin-bank-card{
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:24px;
+  border:1px solid #e5e7eb;
+}
+
+.googlepay-pin-bank-logo{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+
+.googlepay-pin-bank-card h3{
+  color:#111827;
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.googlepay-pin-bank-card p{
+  color:#6b7280;
+  font-size:13px;
+}
+
+.googlepay-pin-label{
+  color:#374151;
+  text-align:center;
+  font-size:15px;
+  margin-bottom:16px;
+}
+
+.googlepay-pin-box-container{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:24px;
+}
+
+.googlepay-pin-box{
+  width:42px;
+  height:42px;
+  background:#ffffff;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:20px;
+  font-weight:700;
+  color:#5b21b6;
+}
+
+.googlepay-pin-keypad{
+  display:grid;
+  grid-template-columns:
+  repeat(3,1fr);
+  gap:12px;
+}
+
+.googlepay-key-btn{
+  height:48px;
+  border:none;
+  border-radius:12px;
+  background:#ffffff;
+  border:1px solid #e5e7eb;
+  font-size:20px;
+  font-weight:500;
+  color:#111827;
+  cursor:pointer;
+  transition:.2s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.googlepay-key-btn:hover{
+  transform:scale(.98);
+}
+
+.googlepay-success-btn{
+  background:#5b21b6;
+  color:#ffffff;
+}
+
+.googlepay-processing-page{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:18px 0 10px;
+}
+
+.googlepay-processing-title{
+  color:#111827;
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.googlepay-processing-subtitle{
+  color:#4b5563;
+  font-size:17px;
+  font-weight:400;
+  text-align:center;
+  line-height:28px;
+  margin-bottom:34px;
+}
+
+.googlepay-processing-image-circle{
+  width:min(170px,45vw);
+  height:min(170px,45vw);
+  border-radius:50%;
+  background:#eef4ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:34px;
+}
+
+.googlepay-processing-image{
+  width:min(115px,30vw);
+  height:auto;
+  object-fit:contain;
+}
+
+.googlepay-processing-dots{
+  display:flex;
+  align-items:center;
+  gap:clamp(10px,3vw,18px);
+  margin-bottom:60px;
+}
+
+.googlepay-dot{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#d1d5db;
+  transition:.3s;
+}
+
+.googlepay-active-dot{
+  background:#1a73e8;
+  transform:scale(1.1);
+}
+
+.googlepay-secure-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0;
+}
+
+.googlepay-secure-icon{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+}
+
+.googlepay-secure-box span{
+  color:#111827;
+  font-size:18px;
+  font-weight:500;
+}
+
+.googlepay-success-card{
+  width:100%;
+  max-width:390px;
+  background:#ffffff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.18);
+  padding:0;
+}
+
+.googlepay-success-top{
+  width:100%;
+  background:#00c853;
+  padding:18px 14px 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.googlepay-success-bottom{
+  width:100%;
+  background:#ffffff;
+  padding:12px 14px 14px;
+}
+
+.googlepay-success-icon-circle{
+  width:68px;
+  height:68px;
+  border-radius:50%;
+  background:#ffffff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.googlepay-success-icon{
+  color:#00c853;
+  font-size:32px;
+}
+
+.googlepay-success-title{
+  color:#ffffff;
+  text-align:center;
+  font-size:clamp(18px,5vw,22px);
+  font-weight:600;
+  margin-bottom:10px;
+}
+
+.googlepay-success-amount{
+  color:#ffffff;
+  text-align:center;
+  font-size:clamp(28px,6vw,30px);
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.googlepay-paid-to-text{
+  color:#ffffff;
+  text-align:center;
+  font-size:13px;
+  font-weight:500;
+  margin-bottom:5px;
+}
+
+.googlepay-paid-company{
+  color:#ffffff;
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+}
+
+.googlepay-transaction-box{
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  border:1px solid #ececec;
+  padding:14px;
+  margin-bottom:16px;
+}
+
+.googlepay-transaction-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.googlepay-transaction-label{
+  color:#6b7280;
+  font-size:12px;
+  margin-bottom:4px;
+}
+
+.googlepay-transaction-id{
+  color:#111827;
+  font-size:clamp(15px,4vw,16px);
+  font-weight:700;
+  line-height:1.3;
+  overflow-wrap:anywhere;
+}
+
+.googlepay-copy-icon{
+  color:#6b7280;
+  font-size:20px;
+  cursor:pointer;
+  flex-shrink:0;
+  margin-top:2px;
+}
+
+.googlepay-transaction-divider{
+  width:100%;
+  height:1px;
+  background:#e5e7eb;
+  margin:14px 0;
+}
+
+.googlepay-paid-from-text{
+  color:#6b7280;
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.googlepay-paid-bank-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.googlepay-paid-bank-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.googlepay-paid-bank-logo{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+
+.googlepay-paid-bank-left h4{
+  color:#111827;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:3px;
+}
+
+.googlepay-paid-bank-left p{
+  color:#6b7280;
+  font-size:11px;
+}
+
+.googlepay-view-details-btn{
+  width:100%;
+  height:50px;
+  border:none;
+  border-radius:14px;
+  background:#5b21b6;
+  color:#ffffff;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  margin-bottom:12px;
+  transition:.2s;
+}
+
+.googlepay-done-btn{
+  width:100%;
+  height:50px;
+  border:none;
+  border-radius:14px;
+  background:#f3f4f6;
+  color:#5b21b6;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.googlepay-view-details-btn:hover,
+.googlepay-done-btn:hover{
+  transform:translateY(-1px);
+}
+
+.googlepay-details-success-card{
+  width:100%;
+  max-width:390px;
+  background:#ffffff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.18);
+  padding:22px 16px;
+}
+
+.googlepay-details-success-icon-circle{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#00c853;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 18px;
+}
+
+.googlepay-details-success-icon{
+  color:#ffffff;
+  font-size:34px;
+}
+
+.googlepay-details-success-title{
+  color:#111827;
+  text-align:center;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.googlepay-details-success-subtitle{
+  color:#4b5563;
+  text-align:center;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.5;
+  margin-bottom:20px;
+}
+
+.googlepay-details-box{
+  width:100%;
+  background:#f8fafc;
+  border:1px solid #ececec;
+  border-radius:16px;
+  padding:14px;
+  margin-bottom:20px;
+}
+
+.googlepay-details-row{
+  width:100%;
+}
+
+.googlepay-details-label{
+  color:#6b7280;
+  font-size:12px;
+  font-weight:500;
+  margin-bottom:6px;
+}
+
+.googlepay-details-value{
+  color:#111827;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.4;
+  word-break:break-word;
+}
+
+.googlepay-details-divider{
+  width:100%;
+  height:1px;
+  background:#e5e7eb;
+  margin:14px 0;
+}
+
+.googlepay-dashboard-btn{
+  width:100%;
+  height:50px;
+  border:none;
+  border-radius:14px;
+  background:#5b21b6;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.googlepay-dashboard-btn:hover{
+  transform:translateY(-1px);
+}
+
+@media(max-width:480px){
+  .googlepay-main-container{
+    padding:0;
+    align-items:flex-start;
+  }
+
+  .googlepay-card{
+    max-width:100%;
+    border-radius:0;
+    padding:14px 18px 18px;
+  }
+
+  .googlepay-loading-screen{
+    min-height:100dvh;
+    justify-content:center;
+  }
+
+  .googlepay-title{
+    font-size:24px;
+  }
+
+  .googlepay-subtitle{
+    font-size:18px;
+    margin-bottom:34px;
+  }
+
+  .googlepay-loader-container{
+    margin-bottom:34px;
+  }
+
+  .googlepay-amount-box h1{
+    font-size:24px;
+  }
+
+  .googlepay-pin-title{
+    font-size:22px;
+  }
+
+  .googlepay-pin-box{
+    width:40px;
+    height:40px;
+  }
+
+  .googlepay-key-btn{
+    height:44px;
+    font-size:18px;
+  }
+
+  .googlepay-processing-title{
+    font-size:24px;
+  }
+
+  .googlepay-processing-subtitle{
+    font-size:15px;
+    line-height:24px;
+  }
+
+  .googlepay-success-card{
+    max-width:100%;
+    border-radius:20px;
+  }
+
+  .googlepay-details-success-card{
+    max-width:100%;
+    border-radius:20px;
+  }
+}

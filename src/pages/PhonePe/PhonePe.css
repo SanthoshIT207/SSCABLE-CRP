@@ -1,0 +1,1035 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins",sans-serif;
+}
+
+.phonepe-main-container{
+  width:100%;
+  min-height:100dvh;
+  padding-bottom:env(safe-area-inset-bottom);
+  background:#5f259f;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px;
+}
+
+.phonepe-card{
+  width:100%;
+  max-width:390px;
+  background:linear-gradient(
+    180deg,
+    #6823b6,
+    #4b1488
+  );
+  border-radius:26px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.25);
+  padding:20px 20px 22px;
+}
+
+.phonepe-bank-page-card{
+  min-height:auto !important;
+}
+
+.phonepe-loading-screen{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:30px 0 20px;
+}
+
+.phonepe-logo-circle{
+  width:113px;
+  height:113px;
+  border-radius:50%;
+  background:#ffffff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:38px auto 18px;
+}
+
+.phonepe-logo{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+}
+
+.phonepe-title{
+  color:#ffffff;
+  font-size:28px;
+  font-weight:600;
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.phonepe-subtitle{
+  color:#f1e8ff;
+  font-size:19px;
+  font-weight:400;
+  text-align:center;
+  margin-bottom:42px;
+}
+
+.phonepe-loader-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:46px;
+}
+
+.phonepe-loader{
+  color:#ffffff;
+  font-size:34px;
+  animation:phonepe-spin 1s linear infinite;
+}
+
+@keyframes phonepe-spin{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.phonepe-bottom{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+
+.phonepe-bottom p{
+  color:#f3eaff;
+  font-size:15px;
+  font-weight:500;
+}
+
+.phonepe-upi-logo{
+  width:92px;
+  object-fit:contain;
+}
+
+.phonepe-bank-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:18px;
+}
+
+.phonepe-back-btn{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:rgba(255,255,255,.12);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+  flex-shrink:0;
+}
+
+.phonepe-back-btn svg{
+  color:#ffffff;
+  font-size:16px;
+}
+
+.phonepe-bank-header-center{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.phonepe-bank-upi-logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+
+.phonepe-bank-header-center h2{
+  color:#ffffff;
+  font-size:20px;
+  font-weight:600;
+}
+
+.phonepe-bank-header-center p{
+  color:#ece1ff;
+  font-size:13px;
+}
+
+.phonepe-amount-box{
+  width:100%;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:18px;
+}
+
+.phonepe-amount-box span{
+  color:#ffffff;
+  font-size:13px;
+  font-weight:400;
+}
+
+.phonepe-amount-box h1{
+  color:#ffffff;
+  font-size:28px;
+  font-weight:700;
+  margin-top:5px;
+}
+
+.phonepe-dropdown-container{
+  width:100%;
+  position:relative;
+  margin-bottom:18px;
+  z-index:50;
+}
+
+.phonepe-dropdown-selected{
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  position:relative;
+  z-index:60;
+  min-height:82px;
+}
+
+.phonepe-choose-bank-text{
+  width:100%;
+  color:#7a7a7a;
+  font-size:14px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+}
+
+.phonepe-selected-bank-info{
+  width:100%;
+}
+
+.phonepe-selected-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.phonepe-selected-left h3{
+  color:#1d2755;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.phonepe-selected-left p{
+  color:#6b7280;
+  font-size:12px;
+}
+
+.phonepe-bank-logo{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  border-radius:10px;
+  flex-shrink:0;
+}
+
+.phonepe-dropdown-arrow{
+  color:#666;
+  font-size:15px;
+  transition:.3s;
+  flex-shrink:0;
+}
+
+.phonepe-rotate-arrow{
+  transform:rotate(180deg);
+}
+
+.phonepe-dropdown-list{
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,.18);
+  z-index:100;
+  max-height:250px;
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+
+.phonepe-dropdown-list::-webkit-scrollbar{
+  width:5px;
+}
+
+.phonepe-dropdown-list::-webkit-scrollbar-thumb{
+  background:#cfcfcf;
+  border-radius:10px;
+}
+
+.phonepe-dropdown-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  cursor:pointer;
+  transition:.2s;
+  background:#ffffff;
+}
+
+.phonepe-dropdown-item:hover{
+  background:#f5f5f5;
+}
+
+.phonepe-dropdown-item h3{
+  color:#1d2755;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.phonepe-dropdown-item p{
+  color:#6b7280;
+  font-size:12px;
+}
+
+.phonepe-message-box{
+  margin-top:18px;
+  position:relative;
+  z-index:1;
+}
+
+.phonepe-message-box label{
+  color:#ffffff;
+  font-size:14px;
+  display:block;
+  margin-bottom:10px;
+}
+
+.phonepe-message-box textarea{
+  width:100%;
+  height:90px;
+  border:none;
+  outline:none;
+  resize:none;
+  border-radius:14px;
+  padding:14px;
+  background:#ffffff;
+  font-size:14px;
+  color:#1d2755;
+}
+
+.phonepe-message-box textarea::placeholder{
+  color:#6b7280;
+}
+
+.phonepe-continue-btn{
+  width:100%;
+  height:54px;
+  border:none;
+  border-radius:14px;
+  margin-top:18px;
+  background:#ffffff;
+  color:#5f259f;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+  position:relative;
+  z-index:1;
+}
+
+.phonepe-continue-btn:hover{
+  transform:translateY(-1px);
+}
+
+.phonepe-pin-page{
+  width:100%;
+}
+
+.phonepe-pin-title{
+  color:#ffffff;
+  text-align:center;
+  font-size:24px;
+  font-weight:600;
+  margin-bottom:22px;
+}
+
+.phonepe-pin-bank-card{
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  padding:14px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:24px;
+}
+
+.phonepe-pin-bank-logo{
+  width:40px;
+  height:40px;
+  object-fit:contain;
+}
+
+.phonepe-pin-bank-card h3{
+  color:#1d2755;
+  font-size:15px;
+  font-weight:600;
+  margin-bottom:4px;
+}
+
+.phonepe-pin-bank-card p{
+  color:#6b7280;
+  font-size:13px;
+}
+
+.phonepe-pin-label{
+  color:#ffffff;
+  text-align:center;
+  font-size:15px;
+  margin-bottom:16px;
+}
+
+.phonepe-pin-box-container{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-bottom:24px;
+}
+
+.phonepe-pin-box{
+  width:42px;
+  height:42px;
+  background:#ffffff;
+  border-radius:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:20px;
+  font-weight:700;
+  color:#5f259f;
+}
+
+.phonepe-pin-keypad{
+  display:grid;
+  grid-template-columns:
+  repeat(3,1fr);
+  gap:12px;
+}
+
+.phonepe-key-btn{
+  height:48px;
+  border:none;
+  border-radius:12px;
+  background:#ffffff;
+  font-size:20px;
+  font-weight:500;
+  color:#1d2755;
+  cursor:pointer;
+  transition:.2s;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.phonepe-key-btn:hover{
+  transform:scale(.98);
+}
+
+.phonepe-success-btn{
+  background:#5f259f;
+  color:#ffffff;
+  border:2px solid #ffffff;
+}
+
+.phonepe-processing-page{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:18px 0 10px;
+}
+
+.phonepe-processing-title{
+  color:#ffffff;
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.phonepe-processing-subtitle{
+  color:#ffffff;
+  font-size:17px;
+  font-weight:400;
+  text-align:center;
+  line-height:28px;
+  margin-bottom:34px;
+}
+
+.phonepe-processing-image-circle{
+  width:min(170px,45vw);
+  height:min(170px,45vw);
+  border-radius:50%;
+  background:#f3ebff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:34px;
+}
+
+.phonepe-processing-image{
+  width:min(115px,30vw);
+  height:auto;
+  object-fit:contain;
+}
+
+.phonepe-processing-dots{
+  display:flex;
+  align-items:center;
+  gap:clamp(10px,3vw,18px);
+  margin-bottom:60px;
+}
+
+.phonepe-dot{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:#dddddd;
+  transition:.3s;
+}
+
+.phonepe-active-dot{
+  background:#6823b6;
+  transform:scale(1.1);
+}
+
+.phonepe-secure-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0px;
+}
+
+.phonepe-secure-icon{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+  flex-shrink:0;
+}
+
+.phonepe-secure-box span{
+  color:#ffffff;
+  font-size:18px;
+  font-weight:500;
+}
+
+.phonepe-success-card{
+  width:100%;
+  max-width:390px;
+  background:#ffffff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.25);
+  height:auto;
+  padding:0;
+  margin:auto;
+}
+
+.phonepe-success-top{
+  width:100%;
+  background:linear-gradient(
+    180deg,
+    #22c55e,
+    #16a34a
+  );
+  padding:22px 16px 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.phonepe-success-bottom{
+  width:100%;
+  background:#ffffff;
+  padding:16px;
+}
+
+.phonepe-success-icon-circle{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#ffffff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:16px;
+}
+
+.phonepe-success-icon{
+  color:#16a34a;
+  font-size:36px;
+}
+
+.phonepe-success-title{
+  color:#ffffff;
+  text-align:center;
+  font-size:clamp(20px,5vw,24px);
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.phonepe-success-amount{
+  color:#ffffff;
+  text-align:center;
+  font-size:clamp(30px,6vw,34px);
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.phonepe-paid-to-text{
+  color:#dcfce7;
+  text-align:center;
+  font-size:13px;
+  font-weight:500;
+  margin-bottom:5px;
+}
+
+.phonepe-paid-company{
+  color:#ffffff;
+  text-align:center;
+  font-size:19px;
+  font-weight:600;
+}
+
+.phonepe-transaction-box{
+  width:100%;
+  background:#ffffff;
+  border-radius:18px;
+  border:1px solid #ececec;
+  padding:16px;
+  margin-bottom:18px;
+}
+
+.phonepe-transaction-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+}
+
+.phonepe-transaction-label{
+  color:#6b7280;
+  font-size:12px;
+  margin-bottom:5px;
+}
+
+.phonepe-transaction-id{
+  color:#1d2755;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.5;
+  word-break:break-word;
+}
+
+.phonepe-copy-icon{
+  color:#6b7280;
+  font-size:20px;
+  cursor:pointer;
+  flex-shrink:0;
+  margin-top:2px;
+}
+
+.phonepe-transaction-divider{
+  width:100%;
+  height:1px;
+  background:#e5e7eb;
+  margin:16px 0;
+}
+
+.phonepe-paid-from-text{
+  color:#6b7280;
+  font-size:12px;
+  margin-bottom:10px;
+}
+
+.phonepe-paid-bank-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.phonepe-paid-bank-left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+
+.phonepe-paid-bank-logo{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+  flex-shrink:0;
+  border-radius:10px;
+}
+
+.phonepe-paid-bank-left h4{
+  color:#1d2755;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:4px;
+  word-break:break-word;
+}
+
+.phonepe-paid-bank-left p{
+  color:#6b7280;
+  font-size:11px;
+  word-break:break-word;
+}
+
+.phonepe-view-details-btn{
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:14px;
+  background:#6d28d9;
+  color:#ffffff;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  margin-bottom:12px;
+  transition:.2s;
+}
+
+.phonepe-done-btn{
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:14px;
+  background:#f3f4f6;
+  color:#16a34a;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.phonepe-view-details-btn:hover,
+.phonepe-done-btn:hover{
+  transform:translateY(-1px);
+}
+
+.phonepe-details-success-card{
+  width:100%;
+  max-width:390px;
+  background:#ffffff;
+  border-radius:26px;
+  overflow:hidden;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.25);
+  padding:24px 16px;
+  margin:auto;
+}
+
+.phonepe-details-success-icon-circle{
+  width:74px;
+  height:74px;
+  border-radius:50%;
+  background:#22c55e;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0 auto 18px;
+}
+
+.phonepe-details-success-icon{
+  color:#ffffff;
+  font-size:36px;
+}
+
+.phonepe-details-success-title{
+  color:#14215c;
+  text-align:center;
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.phonepe-details-success-subtitle{
+  color:#4b5563;
+  text-align:center;
+  font-size:13px;
+  font-weight:400;
+  line-height:1.6;
+  margin-bottom:22px;
+}
+
+.phonepe-details-box{
+  width:100%;
+  background:#f8fafc;
+  border:1px solid #ececec;
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:22px;
+}
+
+.phonepe-details-row{
+  width:100%;
+}
+
+.phonepe-details-label{
+  color:#6b7280;
+  font-size:12px;
+  font-weight:500;
+  margin-bottom:6px;
+}
+
+.phonepe-details-value{
+  color:#14215c;
+  font-size:15px;
+  font-weight:700;
+  line-height:1.5;
+  word-break:break-word;
+}
+
+.phonepe-details-divider{
+  width:100%;
+  height:1px;
+  background:#e5e7eb;
+  margin:16px 0;
+}
+
+.phonepe-dashboard-btn{
+  width:100%;
+  height:52px;
+  border:none;
+  border-radius:14px;
+  background:#5b21b6;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.phonepe-dashboard-btn svg{
+  font-size:16px;
+}
+
+.phonepe-dashboard-btn:hover{
+  transform:translateY(-1px);
+}
+
+@media(max-width:480px){
+  .phonepe-main-container{
+    padding:12px;
+    overflow-x:hidden;
+    align-items:center;
+  }
+
+  .phonepe-card{
+    max-width:100%;
+    border-radius:22px;
+    padding:14px 16px 18px;
+  }
+
+  .phonepe-loading-screen{
+    min-height:100dvh;
+    justify-content:center;
+  }
+
+  .phonepe-title{
+    font-size:24px;
+  }
+
+  .phonepe-subtitle{
+    font-size:18px;
+    margin-bottom:34px;
+  }
+
+  .phonepe-loader-container{
+    margin-bottom:34px;
+  }
+
+  .phonepe-amount-box h1{
+    font-size:24px;
+  }
+
+  .phonepe-bank-header{
+    margin-bottom:16px;
+  }
+
+  .phonepe-amount-box{
+    margin-bottom:16px;
+  }
+
+  .phonepe-dropdown-container{
+    margin-bottom:16px;
+  }
+
+  .phonepe-message-box{
+    margin-top:14px;
+  }
+
+  .phonepe-continue-btn{
+    margin-top:16px;
+  }
+
+  .phonepe-dropdown-list{
+    max-height:220px;
+  }
+
+  .phonepe-dropdown-item{
+    padding:14px;
+  }
+
+  .phonepe-selected-left h3{
+    font-size:13px;
+  }
+
+  .phonepe-selected-left p{
+    font-size:11px;
+  }
+
+  .phonepe-pin-title{
+    font-size:22px;
+  }
+
+  .phonepe-pin-box{
+    width:40px;
+    height:40px;
+  }
+
+  .phonepe-key-btn{
+    height:44px;
+    font-size:18px;
+    border-radius:10px;
+  }
+
+  .phonepe-pin-keypad{
+    gap:10px;
+  }
+
+  .phonepe-processing-title{
+    font-size:24px;
+  }
+
+  .phonepe-processing-subtitle{
+    font-size:15px;
+    line-height:24px;
+    margin-bottom:28px;
+  }
+
+  .phonepe-processing-image-circle{
+    width:150px;
+    height:150px;
+    margin-bottom:30px;
+  }
+
+  .phonepe-processing-image{
+    width:100px;
+  }
+
+  .phonepe-processing-dots{
+    gap:14px;
+    margin-bottom:46px;
+  }
+
+  .phonepe-dot{
+    width:14px;
+    height:14px;
+  }
+
+  .phonepe-secure-box span{
+    font-size:16px;
+  }
+
+  .phonepe-success-card{
+    max-width:100%;
+    border-radius:22px;
+  }
+
+  .phonepe-success-top{
+    padding:22px 14px;
+  }
+
+  .phonepe-success-bottom{
+    padding:14px;
+  }
+
+  .phonepe-success-title{
+    font-size:20px;
+  }
+
+  .phonepe-success-amount{
+    font-size:28px;
+  }
+
+  .phonepe-transaction-id{
+    font-size:14px;
+  }
+
+  .phonepe-view-details-btn,
+  .phonepe-done-btn{
+    height:48px;
+    font-size:13px;
+  }
+
+  .phonepe-details-success-card{
+    max-width:100%;
+    border-radius:22px;
+    padding:22px 14px;
+  }
+
+  .phonepe-details-success-icon-circle{
+    width:68px;
+    height:68px;
+  }
+
+  .phonepe-details-success-icon{
+    font-size:30px;
+  }
+
+  .phonepe-details-success-title{
+    font-size:18px;
+  }
+
+  .phonepe-details-success-subtitle{
+    font-size:12px;
+  }
+
+  .phonepe-details-value{
+    font-size:14px;
+  }
+
+  .phonepe-dashboard-btn{
+    height:48px;
+    font-size:14px;
+  }
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
