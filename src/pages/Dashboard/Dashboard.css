@@ -546,9 +546,13 @@ select{
 }
 @media (min-width:769px) and (max-width:1024px){
 
-  .dashboard-content{
-    min-height:100vh;
-  }
+ .dashboard-wrapper{
+  min-height:auto;
+}
+
+.dashboard-content{
+  min-height:auto;
+}
 
   .dashboard-grid{
     flex:none !important;
