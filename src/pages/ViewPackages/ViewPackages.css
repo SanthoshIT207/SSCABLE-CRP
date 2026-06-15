@@ -477,18 +477,19 @@ body{
     font-size:12px;
   }
 
-  .package-list{
-    padding:14px 16px;
-  }
-
-  .package-card{
-  padding:14px;
-  border-radius:14px;
+ .package-list{
+  padding:14px 16px;
   display:grid;
-  grid-template-columns:
-  55px 1fr auto;
-  align-items:flex-start;
-  gap:14px;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+ .package-card{
+  padding:12px;
+  border-radius:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-height:220px;
 }
 
   .package-details h2{
@@ -508,12 +509,12 @@ body{
 
 .channels-section{
   flex-direction:column;
-  align-items:flex-end;
+  align-items:flex-start;
   gap:10px;
 }
 
 .channel-preview{
-  text-align:right;
+  text-align:left;
   max-width:120px;
   overflow:hidden;
   display:-webkit-box;
