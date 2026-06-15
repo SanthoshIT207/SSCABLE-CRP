@@ -115,7 +115,7 @@ body{
   display:flex;
   flex-direction:column;
   min-width:0;
-  overflow-x:hidden;
+  width:100%;
 }
 
 .topbar{
@@ -553,4 +553,16 @@ input,
 textarea,
 select{
   font-size:16px;
+}
+@media (min-width:769px){
+
+  .view-wrapper{
+    flex-direction:row !important;
+  }
+
+  .view-content{
+    width:calc(100% - 220px);
+    overflow-x:auto;
+  }
+
 }
