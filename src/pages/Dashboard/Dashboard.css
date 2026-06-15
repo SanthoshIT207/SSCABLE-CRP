@@ -547,9 +547,10 @@ select{
 @media (min-width:769px) and (max-width:1024px){
 
   .dashboard-grid{
-    align-items:start;
-    padding-bottom:25px;
-  }
+  flex:none !important;
+  align-items:start;
+  padding-bottom:10px;
+}
 
   .details-card{
   height:fit-content;
