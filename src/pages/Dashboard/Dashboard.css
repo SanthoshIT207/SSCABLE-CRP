@@ -27,10 +27,6 @@ body{
   overflow-x:hidden;
 }
 
-/* =========================================
-   UPDATED UNIQUE SIDEBAR CLASSES
-========================================= */
-
 .dashboard-sidebar{
   width:240px;
   min-width:240px;
@@ -96,9 +92,6 @@ body{
   margin-top:12px;
 }
 
-/* =========================================
-   CONTENT
-========================================= */
 
 .dashboard-content{
   flex:1;
@@ -334,10 +327,6 @@ body{
   color:white;
 }
 
-/* =========================================
-   UPDATED FOOTER CLASS
-========================================= */
-
 .dashboard-main-footer{
   text-align:center;
   padding:16px 20px;
@@ -356,9 +345,6 @@ body{
   font-size:15px;
 }
 
-/* =========================================
-   EXTRA
-========================================= */
 
 .welcome-text{
   display:inline-flex;
@@ -412,10 +398,6 @@ textarea,
 select{
   font-size:16px;
 }
-
-/* =========================================
-   RESPONSIVE
-========================================= */
 
 @media (max-width:1100px){
 

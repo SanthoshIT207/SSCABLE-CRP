@@ -1,4 +1,3 @@
-// AUTO DATE FUNCTION
 const getMonthStartDate = (monthOffset = 0) => {
 
   return new Date(
