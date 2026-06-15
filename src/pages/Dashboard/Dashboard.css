@@ -547,9 +547,8 @@ select{
 @media (min-width:769px) and (max-width:1024px){
 
   .dashboard-grid{
-    flex:none !important;
     align-items:start;
-    padding-bottom:10px;
+    padding-bottom:25px;
   }
 
   .details-card{
@@ -572,7 +571,6 @@ select{
 
   .status-card,
   .quick-actions{
-    flex:none !important;
     height:auto !important;
     min-height:unset !important;
   }
